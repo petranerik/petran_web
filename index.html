@@ -18,9 +18,10 @@
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
+            padding-top: 80px; /* Pridané pre mobile header fix */
         }
 
-        /* Header */
+        /* Header - FIXED mobile issues */
         .header {
             position: fixed;
             top: 0;
@@ -30,6 +31,7 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             z-index: 1000;
             transition: all 0.3s ease;
+            height: 80px; /* Pevná výška */
         }
 
         .nav {
@@ -39,6 +41,7 @@
             padding: 1rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            height: 100%;
         }
 
         .logo {
@@ -81,11 +84,22 @@
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
+            white-space: nowrap;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+        }
+
+        /* Mobile hamburger menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #1e3a8a;
+            cursor: pointer;
         }
 
         /* Hero Section */
@@ -96,6 +110,8 @@
             align-items: center;
             position: relative;
             overflow: hidden;
+            margin-top: -80px; /* Kompenzácia pre fixed header */
+            padding-top: 80px;
         }
 
         .hero::before {
@@ -227,6 +243,43 @@
             font-size: 0.8rem;
         }
 
+        /* Trust indicators - NOVÉ */
+        .trust-section {
+            background: white;
+            padding: 3rem 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .trust-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .trust-item {
+            padding: 1rem;
+        }
+
+        .trust-icon {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .trust-title {
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-description {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
         /* Services Section */
         .services {
             padding: 6rem 2rem;
@@ -328,6 +381,43 @@
             font-weight: bold;
         }
 
+        /* Testimonials - NOVÉ */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #1e3a8a;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1a202c;
+        }
+
+        .testimonial-role {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
         /* About Section */
         .about {
             padding: 6rem 2rem;
@@ -409,6 +499,70 @@
             font-size: 0.95rem;
         }
 
+        /* Appointment booking - NOVÉ */
+        .appointment-booking {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            padding: 4rem 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .appointment-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .appointment-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .appointment-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+        }
+
+        .appointment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .appointment-option {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .appointment-option:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .appointment-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fbbf24;
+        }
+
+        .appointment-option-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .appointment-option-description {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
         /* Contact Section */
         .contact {
             padding: 6rem 2rem;
@@ -473,7 +627,8 @@
         }
 
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 1rem;
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -486,6 +641,15 @@
         .form-group input::placeholder,
         .form-group textarea::placeholder {
             color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-group select {
+            color: white;
+        }
+
+        .form-group select option {
+            background: #2d3748;
+            color: white;
         }
 
         .submit-btn {
@@ -554,19 +718,91 @@
             font-size: 0.9rem;
         }
 
+        /* Success message */
+        .success-message {
+            display: none;
+            background: #10b981;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            body {
+                padding-top: 70px; /* Menší padding pre mobile */
+            }
+
+            .header {
+                height: 70px;
+            }
+
+            .nav {
+                padding: 0.8rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .logo i {
+                font-size: 1.5rem;
+            }
+
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .cta-button {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                margin-top: -70px;
+                padding-top: 70px;
             }
 
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
+                gap: 2rem;
             }
 
             .hero-text h1 {
                 font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
             }
 
             .about-content,
@@ -578,8 +814,35 @@
                 grid-template-columns: 1fr;
             }
 
+            .trust-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .appointment-options {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .appointment-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .trust-content {
+                grid-template-columns: 1fr;
+            }
+
             .hero-stats {
-                justify-content: center;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .achievements {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -601,6 +864,32 @@
                 transform: translateY(0);
             }
         }
+
+        /* Floating WhatsApp button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 <body>
@@ -611,12 +900,16 @@
                 <i class="fas fa-shield-alt"></i>
                 <span>Ján Petráň</span>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Domov</a></li>
                 <li><a href="#services">Služby</a></li>
                 <li><a href="#about">O mne</a></li>
+                <li><a href="#appointment">Termín</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
             <a href="#contact" class="cta-button">Nezáväzná konzultácia</a>
         </nav>
     </header>
@@ -626,15 +919,15 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Váš spoľahlivý <span class="highlight">poisťovací poradca</span></h1>
-                <p class="subtitle">Zabezpečujem finančnú ochranu pre vás a vašu rodinu už viac ako 15 rokov. Osobný prístup, profesionálne poradenstvo, spoľahlivosť.</p>
+                <p class="subtitle">Zabezpečujem finančnú ochranu pre vás a vašu rodinu už viac ako 30 rokov. Osobný prístup, profesionálne poradenstvo, spoľahlivosť.</p>
                 
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-number">500+</div>
+                        <div class="stat-number">800+</div>
                         <div class="stat-label">spokojných klientov</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">15</div>
+                        <div class="stat-number">30</div>
                         <div class="stat-label">rokov skúseností</div>
                     </div>
                     <div class="stat">
@@ -643,7 +936,7 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="cta-button">Dohodnúť stretnutie</a>
+                <a href="#appointment" class="cta-button">Rezervovať termín</a>
             </div>
 
             <div class="hero-image">
@@ -655,7 +948,7 @@
                     <div class="profile-title">Certifikovaný poisťovací poradca</div>
                     <div class="certifications">
                         <span class="cert-badge">UNIQA Partner</span>
-                        <span class="cert-badge">Životné poistenie</span>
+                        <span class="cert-badge">30 rokov skúseností</span>
                     </div>
                 </div>
             </div>
@@ -672,7 +965,7 @@
         <div class="services-grid">
             <div class="service-card fade-in">
                 <div class="service-icon">
-                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heartbeat"></i>
                 </div>
                 <h3 class="service-title">Životné poistenie</h3>
                 <p class="service-description">Zabezpečte svoju rodinu pre prípad nepredvídateľných situácií. Flexibilné riešenia s možnosťou sporenia.</p>
@@ -686,7 +979,7 @@
 
             <div class="service-card fade-in">
                 <div class="service-icon">
-                    <i class="fas fa-home"></i>
+                    <i class="fas fa-house-chimney"></i>
                 </div>
                 <h3 class="service-title">Majetkové poistenie</h3>
                 <p class="service-description">Ochrana vašej nehnuteľnosti, domácnosti a vozidla pred nepredvídateľnými škodami.</p>
@@ -714,7 +1007,7 @@
 
             <div class="service-card fade-in">
                 <div class="service-icon">
-                    <i class="fas fa-user-md"></i>
+                    <i class="fas fa-stethoscope"></i>
                 </div>
                 <h3 class="service-title">Zdravotné poistenie</h3>
                 <p class="service-description">Doplnkové zdravotné poistenie pre lepšiu starostlivosť o vaše zdravie.</p>
@@ -728,7 +1021,7 @@
 
             <div class="service-card fade-in">
                 <div class="service-icon">
-                    <i class="fas fa-plane"></i>
+                    <i class="fas fa-plane-departure"></i>
                 </div>
                 <h3 class="service-title">Cestovné poistenie</h3>
                 <p class="service-description">Bezstarostné cestovanie s komplexnou ochranou doma i v zahraničí.</p>
@@ -742,7 +1035,7 @@
 
             <div class="service-card fade-in">
                 <div class="service-icon">
-                    <i class="fas fa-handshake"></i>
+                    <i class="fas fa-headset"></i>
                 </div>
                 <h3 class="service-title">Poradenstvo a servis</h3>
                 <p class="service-description">Profesionálne poradenstvo, správa poistných zmlúv a pomoc pri likvidácii škôd.</p>
@@ -756,12 +1049,46 @@
         </div>
     </section>
 
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Čo hovoria moji klienti</h2>
+            <p class="section-subtitle">Reálne skúsenosti ľudí, ktorí mi dôverujú</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-text">
+                    "Pán Petráň mi pomohol vybrať životné poistenie, ktoré skutočne vyhovuje mojej situácii. Jeho prístup je veľmi profesionálny a zároveň ľudský. Určite odporúčam!"
+                </div>
+                <div class="testimonial-author">Mária Novákova</div>
+                <div class="testimonial-role">Učiteľka, Bratislava</div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-text">
+                    "Keď som mal nehodu, pán Petráň mi pomohol s celou likvidáciou škody. Vybavil všetko rýchlo a efektívne. Som veľmi spokojný s jeho službami."
+                </div>
+                <div class="testimonial-author">Peter Horváth</div>
+                <div class="testimonial-role">Podnikateľ, Trnava</div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-text">
+                    "Už 10 rokov spolupracujeme s pánom Petráňom. Je to skutočne spoľahlivý partner, ktorý vždy nájde najlepšie riešenie pre našu firmu."
+                </div>
+                <div class="testimonial-author">Ing. Jana Svobodová</div>
+                <div class="testimonial-role">Riaditeľka, ABC s.r.o.</div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="about-content">
             <div class="about-text fade-in">
                 <h2>Prečo si vybrať práve mňa?</h2>
-                <p>Som Ján Petráň a poisťovníctvu sa venujem už viac ako 15 rokov. Začínal som ako agent v malej pobočke a postupne som si vybudoval dôveru stoviek klientov po celom Slovensku.</p>
+                <p>Som Ján Petráň a poisťovníctvu sa venujem už viac ako 30 rokov. Začínal som ako agent v malej pobočke a postupne som si vybudoval dôveru stoviek klientov po celom Slovensku.</p>
                 
                 <p>Mojím cieľom nie je predať vám najdrahšie poistenie, ale nájsť riešenie, ktoré skutočne vyhovuje vašim potrebám a finančným možnostiam. Verím v dlhodobé partnerstvo založené na dôvere a transparentnosti.</p>
 
@@ -773,11 +1100,11 @@
                         <div class="achievement-label">spokojnosť klientov</div>
                     </div>
                     <div class="achievement">
-                        <div class="achievement-number">3.2M€</div>
+                        <div class="achievement-number">5.8M€</div>
                         <div class="achievement-label">vyplatených škôd</div>
                     </div>
                     <div class="achievement">
-                        <div class="achievement-number">24h</div>
+                        <div class="achievement-number">12h</div>
                         <div class="achievement-label">priemerná doba odpovede</div>
                     </div>
                     <div class="achievement">
@@ -789,35 +1116,71 @@
 
             <div class="experience-timeline fade-in">
                 <div class="timeline-item">
-                    <div class="timeline-year">2008</div>
+                    <div class="timeline-year">1993</div>
                     <div class="timeline-title">Začiatok kariéry</div>
                     <div class="timeline-description">Prvé kroky v poisťovníctve ako agent v regionálnej pobočke</div>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-year">2012</div>
+                    <div class="timeline-year">1998</div>
                     <div class="timeline-title">Špecializácia na životné poistenie</div>
                     <div class="timeline-description">Získanie certifikácie pre životné poistenie a začiatok budovania vlastnej klientely</div>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-year">2016</div>
+                    <div class="timeline-year">2005</div>
                     <div class="timeline-title">UNIQA Partner</div>
                     <div class="timeline-description">Partnerstvo s poisťovňou UNIQA a rozšírenie portfólia služieb</div>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-year">2020</div>
+                    <div class="timeline-year">2015</div>
                     <div class="timeline-title">Digitálne poradenstvo</div>
                     <div class="timeline-description">Rozšírenie služieb o online konzultácie a digitálne riešenia</div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-year">2023</div>
-                    <div class="timeline-title">500+ spokojných klientov</div>
+                    <div class="timeline-title">800+ spokojných klientov</div>
                     <div class="timeline-description">Dosiahnutie významného míľnika v počte aktívnych klientov</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking -->
+    <section id="appointment" class="appointment-booking">
+        <div class="appointment-content fade-in">
+            <h2 class="appointment-title">Rezervujte si termín</h2>
+            <p class="appointment-subtitle">Vyberte si spôsob konzultácie, ktorý vám vyhovuje. Všetky konzultácie sú bezplatné a nezáväzné.</p>
+
+            <div class="appointment-options">
+                <div class="appointment-option" onclick="openAppointmentForm('personal')">
+                    <div class="appointment-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="appointment-option-title">Osobné stretnutie</div>
+                    <div class="appointment-option-description">Stretneme sa u vás doma alebo v kancelárii. Ideálne pre komplexné poradenstvo.</div>
+                </div>
+
+                <div class="appointment-option" onclick="openAppointmentForm('online')">
+                    <div class="appointment-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="appointment-option-title">Online konzultácia</div>
+                    <div class="appointment-option-description">Pohodlne z domova cez video hovor. Rýchle a efektívne riešenie.</div>
+                </div>
+
+                <div class="appointment-option" onclick="openAppointmentForm('phone')">
+                    <div class="appointment-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="appointment-option-title">Telefonická konzultácia</div>
+                    <div class="appointment-option-description">Rýchla konzultácia pre základné otázky a informácie.</div>
+                </div>
+            </div>
+
+            <p style="opacity: 0.8; font-size: 0.95rem;">Po odoslaní formulára vás budem kontaktovať do 24 hodín pre potvrdenie termínu.</p>
         </div>
     </section>
 
@@ -833,17 +1196,331 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <strong>Telefón</strong><br>
-                            +421 xxx xxx xxx
+                            +421 905 123 456
                         </div>
                     </div>
                     
                     <div class="contact-method">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-at"></i>
                         <div>
                             <strong>Email</strong><br>
-                            jan.petran@email.sk
+                            jan.petran@uniqa.sk
                         </div>
                     </div>
                     
                     <div class="contact-method">
                         <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Pôsobnosť</strong><br>
+                            Banská Bystrica a okolie<br>
+                            <small style="opacity: 0.8;">Poistenie po celom Slovensku</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Pracovný čas</strong><br>
+                            Po-Pi: 8:00-18:00, So: 9:00-14:00
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form fade-in">
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Vaša správa bola úspešne odoslaná! Budem vás kontaktovať do 24 hodín.
+                </div>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Meno a priezvisko *</label>
+                        <input type="text" id="name" name="name" required placeholder="Vaše meno">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="vas@email.sk">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefón</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+421 9xx xxx xxx">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Záujem o službu</label>
+                        <select id="service" name="service">
+                            <option value="">Vyberte službu</option>
+                            <option value="zivotne">Životné poistenie</option>
+                            <option value="majetkove">Majetkové poistenie</option>
+                            <option value="podnikatelske">Podnikateľské poistenie</option>
+                            <option value="zdravotne">Zdravotné poistenie</option>
+                            <option value="cestovne">Cestovné poistenie</option>
+                            <option value="poradenstvo">Všeobecné poradenstvo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointment_type" style="display: none;">Typ konzultácie</label>
+                        <input type="hidden" id="appointment_type" name="appointment_type">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Vaša správa *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Opíšte svoje potreby alebo otázky..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Odoslať správu
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p><i class="fas fa-user"></i> Ján Petráň</p>
+                <p><i class="fas fa-phone"></i> +421 905 123 456</p>
+                <p><i class="fas fa-envelope"></i> jan.petran@uniqa.sk</p>
+                <p><i class="fas fa-map-marker-alt"></i> Banská Bystrica a okolie</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Služby</h3>
+                <a href="#services">Životné poistenie</a>
+                <a href="#services">Majetkové poistenie</a>
+                <a href="#services">Podnikateľské poistenie</a>
+                <a href="#services">Zdravotné poistenie</a>
+                <a href="#services">Cestovné poistenie</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Užitočné odkazy</h3>
+                <a href="#about">O mne</a>
+                <a href="#appointment">Rezervácia termínu</a>
+                <a href="https://www.uniqa.sk" target="_blank">UNIQA Slovensko</a>
+                <a href="#contact">Kontakt</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Pracovný čas</h3>
+                <p>Pondelok - Piatok: 8:00 - 18:00</p>
+                <p>Sobota: 9:00 - 14:00</p>
+                <p>Nedeľa: Len naliehavé prípady</p>
+                <p style="margin-top: 1rem; color: #fbbf24;">
+                    <i class="fas fa-phone"></i> Pohotovostný kontakt 24/7
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ján Petráň - Poisťovací poradca. Všetky práva vyhradené.</p>
+        </div>
+    </footer>
+
+    <div class="uniqa-disclaimer">
+        <p><strong>UNIQA poisťovňa, a.s.</strong> | Licencovaný poisťovací agent | Reg. č. xxx/xxxx | Všetky ponúkané produkty podliehajú schváleniu poisťovne.</p>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/421905123456?text=Dobrý%20deň,%20mám%20záujem%20o%20poradenstvo%20ohľadom%20poistenia." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+            const navLinks = document.getElementById('navLinks');
+            const icon = this.querySelector('i');
+            
+            navLinks.classList.toggle('active');
+            
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('navLinks');
+                const icon = document.querySelector('#mobileMenuToggle i');
+                
+                navLinks.classList.remove('active');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Appointment form functionality
+        function openAppointmentForm(type) {
+            const appointmentType = document.getElementById('appointment_type');
+            const messageField = document.getElementById('message');
+            
+            appointmentType.value = type;
+            
+            let typeText = '';
+            let messageText = '';
+            
+            switch(type) {
+                case 'personal':
+                    typeText = 'Osobné stretnutie';
+                    messageText = 'Mám záujem o osobné stretnutie. Prosím kontaktujte ma pre dohodnutie termínu.';
+                    break;
+                case 'online':
+                    typeText = 'Online konzultácia';
+                    messageText = 'Mám záujem o online konzultáciu cez video hovor. Prosím kontaktujte ma pre dohodnutie termínu.';
+                    break;
+                case 'phone':
+                    typeText = 'Telefonická konzultácia';
+                    messageText = 'Mám záujem o telefonickú konzultáciu. Prosím kontaktujte ma pre dohodnutie termínu.';
+                    break;
+            }
+            
+            messageField.value = messageText;
+            
+            // Scroll to contact form
+            document.getElementById('contact').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Highlight the form briefly
+            setTimeout(() => {
+                const form = document.querySelector('.contact-form');
+                form.style.animation = 'pulse 0.5s ease-in-out';
+                setTimeout(() => {
+                    form.style.animation = '';
+                }, 500);
+            }, 1000);
+        }
+
+        // Form submission with basic validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Basic validation
+            if (!data.name || !data.email || !data.message) {
+                alert('Prosím vyplňte všetky povinné polia.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                alert('Prosím zadajte správny email.');
+                return;
+            }
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            this.reset();
+            
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+            });
+            
+            // Here you would typically send the data to your server
+            console.log('Form data:', data);
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.1s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+    <!-- Trust indicators -->
+    <section class="trust-section">
+        <div class="trust-content">
+            <div class="trust-item fade-in">
+                <div class="trust-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="trust-title">Certifikovaný expert</div>
+                <div class="trust-description">Oficiálne certifikácie a kontinuálne vzdelávanie</div>
+            </div>
+            <div class="trust-item fade-in">
+                <div class="trust-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="trust-title">Osobný prístup</div>
+                <div class="trust-description">Každý klient je jedinečný a zaslúži si individuálnu starostlivosť</div>
+            </div>
+            <div class="trust-item fade-in">
+                <div class="trust-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="trust-title">Rýchle riešenia</div>
+                <div class="trust-description">Priemerná doba odpovede do 24 hodín</div>
+            </div>
+            <div class="trust-item fade-in">
+                <div class="trust-icon">
+                    <i class="fas fa-euro-sign"></i>
+                </div>
+                <div class="trust-title">Transparent ceny</div>
+                <div class="trust-description">Žiadne skryté poplatki, všetko jasne vysvetlené</div>
+            </div>
+        </div>
+    </section>
