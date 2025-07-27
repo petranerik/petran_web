@@ -18,10 +18,10 @@
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
-            padding-top: 80px; /* Pridané pre mobile header fix */
+            padding-top: 80px;
         }
 
-        /* Header - FIXED mobile issues */
+        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -31,7 +31,7 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             z-index: 1000;
             transition: all 0.3s ease;
-            height: 80px; /* Pevná výška */
+            height: 80px;
         }
 
         .nav {
@@ -110,7 +110,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            margin-top: -80px; /* Kompenzácia pre fixed header */
+            margin-top: -80px;
             padding-top: 80px;
         }
 
@@ -208,14 +208,32 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: url('data:image/jpeg;base64,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') center;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            font-size: 3rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ak máte skutočný obrázok, použite túto verziu:
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: url('cesta/k/vasmu/obrazku.jpg') center center;
             background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1rem;
             border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
+        */
 
         .profile-name {
             font-size: 1.8rem;
@@ -243,7 +261,7 @@
             font-size: 0.8rem;
         }
 
-        /* Trust indicators - NOVÉ */
+        /* Trust indicators */
         .trust-section {
             background: white;
             padding: 3rem 2rem;
@@ -381,7 +399,7 @@
             font-weight: bold;
         }
 
-        /* Testimonials - NOVÉ */
+        /* Testimonials */
         .testimonials {
             padding: 6rem 2rem;
             background: white;
@@ -499,7 +517,7 @@
             font-size: 0.95rem;
         }
 
-        /* Appointment booking - NOVÉ */
+        /* Appointment booking */
         .appointment-booking {
             background: linear-gradient(135deg, #1e3a8a, #3b82f6);
             padding: 4rem 2rem;
@@ -732,7 +750,7 @@
         /* Mobile Responsive */
         @media (max-width: 768px) {
             body {
-                padding-top: 70px; /* Menší padding pre mobile */
+                padding-top: 70px;
             }
 
             .header {
@@ -951,6 +969,40 @@
                         <span class="cert-badge">30 rokov skúseností</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust indicators -->
+    <section class="trust-section">
+        <div class="trust-content">
+            <div class="trust-item fade-in">
+                <div class="trust-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="trust-title">Certifikovaný expert</div>
+                <div class="trust-description">Oficiálne certifikácie a kontinuálne vzdelávanie</div>
+            </div>
+            <div class="trust-item fade-in">
+                <div class="trust-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="trust-title">Osobný prístup</div>
+                <div class="trust-description">Každý klient je jedinečný a zaslúži si individuálnu starostlivosť</div>
+            </div>
+            <div class="trust-item fade-in">
+                <div class="trust-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="trust-title">Rýchle riešenia</div>
+                <div class="trust-description">Priemerná doba odpovede do 24 hodín</div>
+            </div>
+            <div class="trust-item fade-in">
+                <div class="trust-icon">
+                    <i class="fas fa-euro-sign"></i>
+                </div>
+                <div class="trust-title">Transparentné ceny</div>
+                <div class="trust-description">Žiadne skryté poplatky, všetko jasne vysvetlené</div>
             </div>
         </div>
     </section>
@@ -1490,37 +1542,3 @@
     </script>
 </body>
 </html>
-
-    <!-- Trust indicators -->
-    <section class="trust-section">
-        <div class="trust-content">
-            <div class="trust-item fade-in">
-                <div class="trust-icon">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <div class="trust-title">Certifikovaný expert</div>
-                <div class="trust-description">Oficiálne certifikácie a kontinuálne vzdelávanie</div>
-            </div>
-            <div class="trust-item fade-in">
-                <div class="trust-icon">
-                    <i class="fas fa-handshake"></i>
-                </div>
-                <div class="trust-title">Osobný prístup</div>
-                <div class="trust-description">Každý klient je jedinečný a zaslúži si individuálnu starostlivosť</div>
-            </div>
-            <div class="trust-item fade-in">
-                <div class="trust-icon">
-                    <i class="fas fa-clock"></i>
-                </div>
-                <div class="trust-title">Rýchle riešenia</div>
-                <div class="trust-description">Priemerná doba odpovede do 24 hodín</div>
-            </div>
-            <div class="trust-item fade-in">
-                <div class="trust-icon">
-                    <i class="fas fa-euro-sign"></i>
-                </div>
-                <div class="trust-title">Transparentné ceny</div>
-                <div class="trust-description">Žiadne skryté poplatky, všetko jasne vysvetlené</div>
-            </div>
-        </div>
-    </section>
