@@ -3,8 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ján Petráň - Váš poisťovací poradca | Uniqa</title>
-    <meta name="description" content="Profesionálne poisťovacie služby s osobným prístupom. Životné, majetkové a podnikateľské poistenie. Váš partner pre finančnú bezpečnosť.">
+    
+    <!-- SEO Optimalizované meta tagy -->
+    <title>Ján Petráň - Poisťovací poradca Banská Bystrica | Životné, Majetkové Poistenie</title>
+    <meta name="description" content="Profesionálne poistovanie v Banskej Bystrici a po celom Slovensku. Ján Petráň - 30 rokov skúseností, osobný prístup, životné, majetkové, podnikateľské poistenie UNIQA.">
+    
+    <!-- Rozšírené SEO meta tagy -->
+    <meta name="keywords" content="poistenie Banská Bystrica, poisťovací poradca, životné poistenie, majetkové poistenie, UNIQA poistenie, poistenie Slovensko, podnikateľské poistenie, zdravotné poistenie, cestovné poistenie">
+    <meta name="author" content="Ján Petráň">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.janpetran-poistenie.sk/">
+    
+    <!-- Open Graph pre sociálne médiá -->
+    <meta property="og:title" content="Ján Petráň - Poisťovací poradca Banská Bystrica">
+    <meta property="og:description" content="30 rokov skúseností v poisťovníctve. Komplexné poistenie pre jednotlivcov a firmy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.janpetran-poistenie.sk/">
+    <meta property="og:locale" content="sk_SK">
+    
+    <!-- Schema.org štruktúrované dáta -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ján Petráň",
+        "jobTitle": "Poisťovací poradca",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "UNIQA poisťovňa"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Banská Bystrica",
+            "addressCountry": "SK"
+        },
+        "telephone": "+421905123456",
+        "email": "jan.petran@uniqa.sk",
+        "url": "https://www.janpetran-poistenie.sk",
+        "sameAs": [
+            "https://www.facebook.com/janpetranpoistenie"
+        ]
+    }
+    </script>
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -204,28 +245,12 @@
             to { transform: translateY(0); }
         }
 
-/*        .profile-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            font-size: 3rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-        }
-*/
-        /* Ak máte skutočný obrázok, použite túto verziu: */
         .profile-avatar {
             width: 160px;
             height: 160px;
             border-radius: 50%;
             background: url('images/jan-petran.jpg') center center;
-            background-size: 80%; /* zmenené z 'cover' na 80% */
+            background-size: 80%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -233,7 +258,6 @@
             border: 3px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
-
 
         .profile-name {
             font-size: 1.8rem;
@@ -670,6 +694,48 @@
             color: white;
         }
 
+        /* Vylepšené GDPR súhlas */
+        .gdpr-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .gdpr-checkbox:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .gdpr-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            margin: 0;
+            cursor: pointer;
+            accent-color: #fbbf24;
+        }
+
+        .gdpr-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .gdpr-text a {
+            color: #fbbf24;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .gdpr-text a:hover {
+            color: #f59e0b;
+        }
+
         .submit-btn {
             background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
             color: white;
@@ -908,6 +974,22 @@
             transform: scale(1.1);
             box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
         }
+
+        /* Breadcrumbs pre lepšie SEO */
+        .breadcrumbs {
+            background: #f8fafc;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumbs a {
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -931,6 +1013,11 @@
             <a href="#contact" class="cta-button">Nezáväzná konzultácia</a>
         </nav>
     </header>
+
+    <!-- Breadcrumbs pre SEO -->
+    <div class="breadcrumbs">
+        <a href="#home">Domov</a> > <span>Poisťovací poradca Banská Bystrica</span>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -1015,7 +1102,7 @@
         </div>
 
         <div class="services-grid">
-            <div class="service-card fade-in">
+            <article class="service-card fade-in">
                 <div class="service-icon">
                     <i class="fas fa-heartbeat"></i>
                 </div>
@@ -1027,9 +1114,9 @@
                     <li>Detské poistenie s garantovaným prijatím</li>
                     <li>Investičné životné poistenie</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="service-card fade-in">
+            <article class="service-card fade-in">
                 <div class="service-icon">
                     <i class="fas fa-house-chimney"></i>
                 </div>
@@ -1041,23 +1128,23 @@
                     <li>Havarijné poistenie vozidiel</li>
                     <li>Poistenie elektroniky</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="service-card fade-in">
+            <article class="service-card fade-in">
                 <div class="service-icon">
                     <i class="fas fa-briefcase"></i>
                 </div>
                 <h3 class="service-title">Podnikateľské poistenie</h3>
-                <p class="service-description">Komplexná ochrana vašho podnikania, zamestnancov a obchodnej zodpovednosti.</p>
+                <p class="service-description">Komplexná ochrana vašeho podnikania, zamestnancov a obchodnej zodpovednosti.</p>
                 <ul class="service-features">
                     <li>Poistenie podnikateľských rizík</li>
                     <li>Poistenie zodpovednosti za škodu</li>
                     <li>Poistenie zamestnancov</li>
                     <li>Poistenie komerčných vozidiel</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="service-card fade-in">
+            <article class="service-card fade-in">
                 <div class="service-icon">
                     <i class="fas fa-stethoscope"></i>
                 </div>
@@ -1069,9 +1156,9 @@
                     <li>Stomatologická starostlivosť</li>
                     <li>Preventívne prehliadky</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="service-card fade-in">
+            <article class="service-card fade-in">
                 <div class="service-icon">
                     <i class="fas fa-plane-departure"></i>
                 </div>
@@ -1083,9 +1170,9 @@
                     <li>Storno poistenie</li>
                     <li>Poistenie batožiny</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="service-card fade-in">
+            <article class="service-card fade-in">
                 <div class="service-icon">
                     <i class="fas fa-headset"></i>
                 </div>
@@ -1097,7 +1184,7 @@
                     <li>Pomoc pri likvidácii škôd</li>
                     <li>Pravidelný prehľad zmlúv</li>
                 </ul>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -1109,29 +1196,29 @@
         </div>
 
         <div class="testimonials-grid">
-            <div class="testimonial-card fade-in">
+            <article class="testimonial-card fade-in">
                 <div class="testimonial-text">
                     "Pán Petráň mi pomohol vybrať životné poistenie, ktoré skutočne vyhovuje mojej situácii. Jeho prístup je veľmi profesionálny a zároveň ľudský. Určite odporúčam!"
                 </div>
-                <div class="testimonial-author">Mária Novákova</div>
+                <div class="testimonial-author">Mária Nováková</div>
                 <div class="testimonial-role">Učiteľka, Bratislava</div>
-            </div>
+            </article>
 
-            <div class="testimonial-card fade-in">
+            <article class="testimonial-card fade-in">
                 <div class="testimonial-text">
                     "Keď som mal nehodu, pán Petráň mi pomohol s celou likvidáciou škody. Vybavil všetko rýchlo a efektívne. Som veľmi spokojný s jeho službami."
                 </div>
                 <div class="testimonial-author">Peter Horváth</div>
                 <div class="testimonial-role">Podnikateľ, Trnava</div>
-            </div>
+            </article>
 
-            <div class="testimonial-card fade-in">
+            <article class="testimonial-card fade-in">
                 <div class="testimonial-text">
                     "Už 10 rokov spolupracujeme s pánom Petráňom. Je to skutočne spoľahlivý partner, ktorý vždy nájde najlepšie riešenie pre našu firmu."
                 </div>
                 <div class="testimonial-author">Ing. Jana Svobodová</div>
                 <div class="testimonial-role">Riaditeľka, ABC s.r.o.</div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -1142,7 +1229,7 @@
                 <h2>Prečo si vybrať práve mňa?</h2>
                 <p>Som Ján Petráň a poisťovníctvu sa venujem už viac ako 30 rokov. Začínal som ako agent v malej pobočke a postupne som si vybudoval dôveru stoviek klientov po celom Slovensku.</p>
                 
-                <p>Mojím cieľom nie je predať vám najdrahšie poistenie, ale nájsť riešenie, ktoré skutočne vyhovuje vašim potrebám a finančným možnostiam. Verím v dlhodobé partnerstvo založené na dôvere a transparentnosti.</p>
+                <p>Mojím cieľom nie je predať vám najdrahšie poistenie, ale nájsť riešenie, ktoré skutočne vyhovuje vašim potrebám a finančným možnostiam. Verím v dlhodobé partnerstvo založené na důvere a transparentnosti.</p>
 
                 <p>Každému klientovi venujem individuálny prístup. Nie sú pre mňa dôležité len čísla, ale skutočné príbehy a potreby ľudí, ktorým pomáham zabezpečiť ich budúcnosť.</p>
 
@@ -1284,58 +1371,58 @@
                     <i class="fas fa-check-circle"></i> Vaša správa bola úspešne odoslaná! Budem vás kontaktovať do 24 hodín.
                 </div>
 
-<form action="https://formsubmit.co/petran.erik7@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="Nová správa z webu Ján Petráň">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://tvoja-domena.sk/dakujem.html">
+                <form action="https://formsubmit.co/petran.erik7@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Nová správa z webu Ján Petráň">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://tvoja-domena.sk/dakujem.html">
 
-    <div class="form-group">
-        <label for="name">Meno a priezvisko *</label>
-        <input type="text" id="name" name="Meno a priezvisko" required placeholder="Vaše meno">
-    </div>
+                    <div class="form-group">
+                        <label for="name">Meno a priezvisko *</label>
+                        <input type="text" id="name" name="Meno a priezvisko" required placeholder="Vaše meno">
+                    </div>
 
-    <div class="form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="Email" required placeholder="vas@email.sk">
-    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="Email" required placeholder="vas@email.sk">
+                    </div>
 
-    <div class="form-group">
-        <label for="phone">Telefón</label>
-        <input type="tel" id="phone" name="Telefón" placeholder="+421 9xx xxx xxx">
-    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefón</label>
+                        <input type="tel" id="phone" name="Telefón" placeholder="+421 9xx xxx xxx">
+                    </div>
 
-    <div class="form-group">
-        <label for="service">Záujem o službu</label>
-        <select id="service" name="Záujem o službu">
-            <option value="">Vyberte službu</option>
-            <option value="Životné poistenie">Životné poistenie</option>
-            <option value="Majetkové poistenie">Majetkové poistenie</option>
-            <option value="Podnikateľské poistenie">Podnikateľské poistenie</option>
-            <option value="Zdravotné poistenie">Zdravotné poistenie</option>
-            <option value="Cestovné poistenie">Cestovné poistenie</option>
-            <option value="Poradenstvo">Všeobecné poradenstvo</option>
-        </select>
-    </div>
+                    <div class="form-group">
+                        <label for="service">Záujem o službu</label>
+                        <select id="service" name="Záujem o službu">
+                            <option value="">Vyberte službu</option>
+                            <option value="Životné poistenie">Životné poistenie</option>
+                            <option value="Majetkové poistenie">Majetkové poistenie</option>
+                            <option value="Podnikateľské poistenie">Podnikateľské poistenie</option>
+                            <option value="Zdravotné poistenie">Zdravotné poistenie</option>
+                            <option value="Cestovné poistenie">Cestovné poistenie</option>
+                            <option value="Poradenstvo">Všeobecné poradenstvo</option>
+                        </select>
+                    </div>
 
-    <div class="form-group">
-        <label for="message">Vaša správa *</label>
-        <textarea id="message" name="Správa" rows="5" required placeholder="Opíšte svoje potreby alebo otázky..."></textarea>
-    </div>
+                    <div class="form-group">
+                        <label for="message">Vaša správa *</label>
+                        <textarea id="message" name="Správa" rows="5" required placeholder="Opíšte svoje potreby alebo otázky..."></textarea>
+                    </div>
 
-    <div class="form-group">
-    <label>
-        <input type="checkbox" name="GDPR súhlas" required>
-        Súhlasím so spracovaním osobných údajov podľa
-        <a href="#gdpr" target="_blank">Podmienok ochrany osobných údajov</a>.
-    </label>
-</div>
+                    <div class="gdpr-checkbox">
+                        <input type="checkbox" id="gdpr" name="GDPR súhlas" required>
+                        <label for="gdpr" class="gdpr-text">
+                            Súhlasím so spracovaním osobných údajov za účelom odpovede na moju požiadavku v súlade so 
+                            <a href="https://ec.europa.eu/info/law/law-topic/data-protection_sk" target="_blank" rel="noopener">všeobecným nariadením o ochrane údajov (GDPR)</a>. 
+                            Vaše údaje nebudú poskytnuté tretím stranám a budú použité výlučne na kontakt s vami.
+                        </label>
+                    </div>
 
-    <button type="submit" class="submit-btn">
-        <i class="fas fa-paper-plane"></i> Odoslať správu
-    </button>
-</form>
-
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Odoslať správu
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -1355,7 +1442,7 @@
                 <h3>Služby</h3>
                 <a href="#services">Životné poistenie</a>
                 <a href="#services">Majetkové poistenie</a>
-                <a href="#services">Podnikateľské poistenie</a>
+                <a a href="#services">Podnikateľské poistenie</a>
                 <a href="#services">Zdravotné poistenie</a>
                 <a href="#services">Cestovné poistenie</a>
             </div>
@@ -1364,7 +1451,7 @@
                 <h3>Užitočné odkazy</h3>
                 <a href="#about">O mne</a>
                 <a href="#appointment">Rezervácia termínu</a>
-                <a href="https://www.uniqa.sk" target="_blank">UNIQA Slovensko</a>
+                <a href="https://www.uniqa.sk" target="_blank" rel="noopener">UNIQA Slovensko</a>
                 <a href="#contact">Kontakt</a>
             </div>
 
@@ -1389,7 +1476,7 @@
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/421905123456?text=Dobrý%20deň,%20mám%20záujem%20o%20poradenstvo%20ohľadom%20poistenia." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/421905123456?text=Dobrý%20deň,%20mám%20záujem%20o%20poradenstvo%20ohľadom%20poistenia." class="whatsapp-float" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1424,25 +1511,18 @@
 
         // Appointment form functionality
         function openAppointmentForm(type) {
-            const appointmentType = document.getElementById('appointment_type');
             const messageField = document.getElementById('message');
             
-            appointmentType.value = type;
-            
-            let typeText = '';
             let messageText = '';
             
             switch(type) {
                 case 'personal':
-                    typeText = 'Osobné stretnutie';
                     messageText = 'Mám záujem o osobné stretnutie. Prosím kontaktujte ma pre dohodnutie termínu.';
                     break;
                 case 'online':
-                    typeText = 'Online konzultácia';
                     messageText = 'Mám záujem o online konzultáciu cez video hovor. Prosím kontaktujte ma pre dohodnutie termínu.';
                     break;
                 case 'phone':
-                    typeText = 'Telefonická konzultácia';
                     messageText = 'Mám záujem o telefonickú konzultáciu. Prosím kontaktujte ma pre dohodnutie termínu.';
                     break;
             }
@@ -1464,45 +1544,6 @@
                 }, 500);
             }, 1000);
         }
-
-        // Form submission with basic validation
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Basic validation
-            if (!data.name || !data.email || !data.message) {
-                alert('Prosím vyplňte všetky povinné polia.');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                alert('Prosím zadajte správny email.');
-                return;
-            }
-            
-            // Show success message
-            document.getElementById('successMessage').style.display = 'block';
-            this.reset();
-            
-            // Scroll to success message
-            document.getElementById('successMessage').scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'center'
-            });
-            
-            // Here you would typically send the data to your server
-            console.log('Form data:', data);
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                document.getElementById('successMessage').style.display = 'none';
-            }, 5000);
-        });
 
         // Fade in animation on scroll
         const observerOptions = {
